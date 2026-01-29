@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* FemCare Design System */
+    --background: 340 80% 95%;
+    --background-end: 291 47% 93%;
+    --foreground: 340 30% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 340 30% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 30% 25%;
+
+    /* Primary: Soft Rose Pink */
+    --primary: 340 82% 76%;
+    --primary-foreground: 340 30% 20%;
+
+    /* Secondary: Deep Berry Pink */
+    --secondary: 340 82% 48%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Accent: Muted Lavender */
+    --accent: 261 47% 74%;
+    --accent-foreground: 261 40% 25%;
+
+    --muted: 340 30% 90%;
+    --muted-foreground: 340 20% 45%;
+
+    --destructive: 0 65% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Health indicators */
+    --success: 122 39% 57%;
+    --success-foreground: 122 40% 15%;
+    --warning: 45 93% 55%;
+    --warning-foreground: 45 90% 15%;
+    --risk-high: 0 60% 65%;
+    --risk-high-foreground: 0 0% 100%;
+
+    --border: 340 40% 88%;
+    --input: 340 40% 88%;
+    --ring: 340 82% 76%;
+
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-bg: linear-gradient(135deg, hsl(340 80% 95%) 0%, hsl(291 47% 93%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(340 82% 76%) 0%, hsl(261 47% 74%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(340 60% 98%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(340 82% 76% / 0.25);
+    --shadow-card: 0 8px 32px -8px hsl(340 82% 48% / 0.15);
+    --shadow-elevated: 0 16px 48px -12px hsl(340 82% 48% / 0.2);
+
+    /* Sidebar (keeping defaults) */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 340 30% 8%;
+    --background-end: 261 30% 10%;
+    --foreground: 340 20% 95%;
+
+    --card: 340 25% 12%;
+    --card-foreground: 340 20% 95%;
+
+    --popover: 340 25% 12%;
+    --popover-foreground: 340 20% 95%;
+
+    --primary: 340 82% 70%;
+    --primary-foreground: 340 30% 10%;
+
+    --secondary: 340 70% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 261 40% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 340 20% 18%;
+    --muted-foreground: 340 15% 65%;
+
+    --border: 340 20% 20%;
+    --input: 340 20% 20%;
+    --ring: 340 82% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background: var(--gradient-bg);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .gradient-bg {
+    background: var(--gradient-bg);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
